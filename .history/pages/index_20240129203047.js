@@ -7,18 +7,18 @@ import Header from "@/components/Header";
 export default function Home() {
 
 
-  const classFilters = {
-    1: 'Magician',
-    2: 'Theif',
-    4: 'Warrior',
-    8: 'Bowman',
-    16: 'Pirate',
-    32: 'Nothing'
-  }
-  
-  const [input, setInput] = useState();
-  
-  const getClassStyle = flagValue => (input & flagValue) > 0 ? { backgroundColor: 'yellow' } : null;
+const classFilters = {
+  1: 'Magician',
+  2: 'Theif',
+  4: 'Warrior',
+  8: 'Bowman',
+  16: 'Pirate',
+  32: 'Nothing'
+}
+
+const [input, setInput] = useState();
+
+const getClassStyle = flagValue => (input & flagValue) > 0 ? { backgroundColor: 'yellow' } : null;
 
   return (
     <>

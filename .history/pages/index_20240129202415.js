@@ -2,23 +2,23 @@ import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import { useState } from "react";
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+
 
 export default function Home() {
 
 
-  const classFilters = {
-    1: 'Magician',
-    2: 'Theif',
-    4: 'Warrior',
-    8: 'Bowman',
-    16: 'Pirate',
-    32: 'Nothing'
-  }
-  
-  const [input, setInput] = useState();
-  
-  const getClassStyle = flagValue => (input & flagValue) > 0 ? { backgroundColor: 'yellow' } : null;
+const classFilters = {
+  1: 'Magician',
+  2: 'Theif',
+  4: 'Warrior',
+  8: 'Bowman',
+  16: 'Pirate',
+  32: 'Nothing'
+}
+
+const [input, setInput] = useState();
+
+const getClassStyle = flagValue => (input & flagValue) > 0 ? { backgroundColor: 'yellow' } : null;
 
   return (
     <>
@@ -28,7 +28,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header/>
+      <header>
+        header area
+      </header>
       <main className={`${styles.main}`}>
         <input 
         id="input"
@@ -52,7 +54,7 @@ export default function Home() {
       </main>
     
         <Footer/>
-      </>
-   
+      
+    </>
   );
 }
